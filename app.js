@@ -21,7 +21,7 @@ function sortear () {
         ++Contador;
     }
 
-    //console.log(ListaNumeros);
+    console.log(ListaNumeros);
     let Resultado = document.getElementById ("resultado");
     Resultado.innerHTML = '<label class="texto__paragrafo">Números sorteados:' + ListaNumeros + '</label>'
 
