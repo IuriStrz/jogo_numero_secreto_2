@@ -25,6 +25,7 @@ function sortear () {
     let Resultado = document.getElementById ("resultado");
     Resultado.innerHTML = '<label class="texto__paragrafo">Números sorteados:' + ListaNumeros + '</label>'
 
+    AlterarStatusBotao()
 }
 
 function ObterNumeroAleatorio (A, B) {
@@ -35,5 +36,20 @@ function ObterNumeroAleatorio (A, B) {
 }
 
 function reiniciar () {
+    document.getElementById ("quantidade").value = "";
+    document.getElementById ("de").value = "";
+    document.getElementById ("ate").value = "";
+    document.getElementById ("resultado").innerHTML = '<label class="texto__paragrafo">Números sorteados:  nenhum até agora</label>';
+    AlterarStatusBotao() 
+}
 
+function AlterarStatusBotao() {
+    let Botao = document.getElementById ("btn-reiniciar")
+    if (Botao.classList.contains("container__botao-desabilitado")==true) {
+        Botao.classList.remove("container__botao-desabilitado")
+        Botao.classList.add("container__botao")
+    } else {
+        Botao.classList.remove("container__botao")
+        Botao.classList.add("container__botao-desabilitado")
+    }
 }
